@@ -6,7 +6,6 @@ cabal-version: 2.2
 
 name:           scanner
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/scanner#readme>
 homepage:       https://github.com/githubuser/scanner#readme
 bug-reports:    https://github.com/githubuser/scanner/issues
 author:         Author name here
@@ -28,10 +27,22 @@ library
       Paths_scanner
   hs-source-dirs:
       src
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  default-extensions:
+      NoImplicitPrelude
+      NoPolyKinds
+      DataKinds
+      DeriveAnyClass
+      DerivingStrategies
+      DerivingVia
+      DuplicateRecordFields
+      LambdaCase
+      OverloadedRecordDot
+      OverloadedStrings
+  ghc-options: -j8 +RTS -A32m -RTS -O2 -haddock -Weverything -Wno-all-missed-specialisations -Wno-missed-specialisations -Wno-missing-local-signatures -Wno-missing-export-lists -Wno-unsafe -Wno-unused-packages -Wno-missing-kind-signatures -Wno-missing-safe-haskell-mode -Wno-missing-import-lists
   build-depends:
       base >=4.7 && <5
-  default-language: Haskell2010
+    , relude
+  default-language: GHC2021
 
 executable scanner-exe
   main-is: Main.hs
@@ -41,11 +52,23 @@ executable scanner-exe
       Paths_scanner
   hs-source-dirs:
       app
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  default-extensions:
+      NoImplicitPrelude
+      NoPolyKinds
+      DataKinds
+      DeriveAnyClass
+      DerivingStrategies
+      DerivingVia
+      DuplicateRecordFields
+      LambdaCase
+      OverloadedRecordDot
+      OverloadedStrings
+  ghc-options: -j8 +RTS -A32m -RTS -O2 -haddock -Weverything -Wno-all-missed-specialisations -Wno-missed-specialisations -Wno-missing-local-signatures -Wno-missing-export-lists -Wno-unsafe -Wno-unused-packages -Wno-missing-kind-signatures -Wno-missing-safe-haskell-mode -Wno-missing-import-lists -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , relude
     , scanner
-  default-language: Haskell2010
+  default-language: GHC2021
 
 test-suite scanner-test
   type: exitcode-stdio-1.0
@@ -56,8 +79,20 @@ test-suite scanner-test
       Paths_scanner
   hs-source-dirs:
       test
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  default-extensions:
+      NoImplicitPrelude
+      NoPolyKinds
+      DataKinds
+      DeriveAnyClass
+      DerivingStrategies
+      DerivingVia
+      DuplicateRecordFields
+      LambdaCase
+      OverloadedRecordDot
+      OverloadedStrings
+  ghc-options: -j8 +RTS -A32m -RTS -O2 -haddock -Weverything -Wno-all-missed-specialisations -Wno-missed-specialisations -Wno-missing-local-signatures -Wno-missing-export-lists -Wno-unsafe -Wno-unused-packages -Wno-missing-kind-signatures -Wno-missing-safe-haskell-mode -Wno-missing-import-lists -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , relude
     , scanner
-  default-language: Haskell2010
+  default-language: GHC2021
