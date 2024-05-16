@@ -1,0 +1,68 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "root"
+    },
+    {
+      "path": "scanner",
+      "name": "scanner"
+    },
+    {
+      "path": "webapp",
+      "name": "webapp"
+    }
+  ],
+  "settings": {
+    "[elm]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "elmTooling.elm-ls-vscode"
+    },
+    "elmLS.elmReviewDiagnostics": "warning",
+    "[haskell]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "haskell.haskell"
+    },
+    "haskell.manageHLS": "GHCup",
+    "haskell.openSourceInHackage": false,
+    "[markdown]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.unicodeHighlight.nonBasicASCII": false
+    },
+    "[html]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[shellscript]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "files.insertFinalNewline": true,
+    "editor.unicodeHighlight.invisibleCharacters": true,
+    "editor.unicodeHighlight.ambiguousCharacters": true,
+    "editor.unicodeHighlight.nonBasicASCII": true,
+    "editor.rulers": [
+      {
+        "column": 120,
+        "color": "#d6c20e20"
+      }
+    ]
+  },
+  "extensions": {
+    "recommendations": [
+      "sclu1034.justfile",
+      "haskell.haskell",
+      "elmtooling.elm-ls-vscode",
+      "esbenp.prettier-vscode",
+      "shd101wyy.markdown-preview-enhanced",
+      "ms-azuretools.vscode-docker",
+      "foxundermoon.shell-format",
+      "github.vscode-github-actions"
+    ]
+  }
+}
