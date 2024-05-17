@@ -1,6 +1,7 @@
 module ElmCli (checkElmCliAvailable, initProject, initTesting, compileProject) where
 
 import Common.Effect
+import Common.Env (AppEnv (..))
 import Control.Monad.Except (throwError)
 import Data.Aeson ((.:))
 import Data.Aeson qualified as Aeson
@@ -45,7 +46,8 @@ stubProjectDirectory = testDirectory <> "/.stub-project"
 {-# INLINE createSrcDirectoryForPackage #-}
 createSrcDirectoryForPackage :: ElmPackage -> AppM ()
 createSrcDirectoryForPackage package = do
-  fromIO $ createDirectoryIfMissing True (testDirectory <> "/" <> toString package.fullName <> "/src")
+  env <- ask
+  fromIO $ createDirectoryIfMissing True (env.workingDirectory <> "/" <> testDirectory <> "/" <> toString package.fullName <> "/src")
 
 {-# INLINE stubElmMainFile #-}
 stubElmMainFile :: Text
@@ -58,10 +60,11 @@ stubElmMainFile =
 
 initTesting :: AppM ()
 initTesting = do
+  env <- ask
   -- cleanElmCache -- TODO: enable when running locally after some time (consider adding a flag to enable it)
-  FileSystem.recursivelyDeleteDirectory testDirectory
-  fromIO $ createDirectoryIfMissing True testDirectory
-  fromIO $ createDirectoryIfMissing True stubProjectDirectory
+  FileSystem.recursivelyDeleteDirectory $ env.workingDirectory <> "/" <> testDirectory
+  fromIO $ createDirectoryIfMissing True $ env.workingDirectory <> "/" <> testDirectory
+  fromIO $ createDirectoryIfMissing True $ env.workingDirectory <> "/" <> stubProjectDirectory
   elmCli <- getElmCli
   let elmInitProcess = (proc elmCli ["init"]) {cwd = Just stubProjectDirectory}
   (code, _stdout', stderr') <- liftIO $ readCreateProcessWithExitCode elmInitProcess "y\n"
@@ -73,15 +76,17 @@ initTesting = do
 {-# INLINE initProject #-}
 initProject :: ElmPackage -> AppM ()
 initProject package = do
+  env <- ask
   createSrcDirectoryForPackage package
-  fromIO $ copyFile (stubProjectDirectory <> "/src/Main.elm") (testDirectory <> "/" <> toString package.fullName <> "/src/Main.elm")
-  fromIO $ copyFile (stubProjectDirectory <> "/elm.json") (testDirectory <> "/" <> toString package.fullName <> "/elm.json")
+  fromIO $ copyFile (stubProjectDirectory <> "/src/Main.elm") (env.workingDirectory <> "/" <> testDirectory <> "/" <> toString package.fullName <> "/src/Main.elm")
+  fromIO $ copyFile (stubProjectDirectory <> "/elm.json") (env.workingDirectory <> "/" <> testDirectory <> "/" <> toString package.fullName <> "/elm.json")
 
 {-# INLINE compileProject #-}
 compileProject :: ElmPackage -> AppM (Maybe FailedCompilation)
 compileProject package = do
+  env <- ask
   elmCli <- getElmCli
-  let elmMakeProcess = (proc elmCli ["make", "--output=/dev/null", "--report=json", "src/Main.elm"]) {cwd = Just (testDirectory <> "/" <> toString package.fullName)}
+  let elmMakeProcess = (proc elmCli ["make", "--output=/dev/null", "--report=json", "src/Main.elm"]) {cwd = Just (env.workingDirectory <> "/" <> testDirectory <> "/" <> toString package.fullName)}
   (code, _stdout', stdErrJson) <- fromIO $ readCreateProcessWithExitCode elmMakeProcess ""
   case code of
     ExitSuccess -> pure Nothing

@@ -1,6 +1,7 @@
 module ElmJsonCli (checkElmJsonCliAvailable, installPackage) where
 
 import Common.Effect
+import Common.Env (AppEnv (..))
 import Control.Monad.Except (throwError)
 import ElmPackage (ElmPackage (..))
 import Relude
@@ -26,7 +27,8 @@ testDirectory = ".package-test"
 installPackage :: ElmPackage -> AppM ()
 installPackage package = do
   elmJsonCli <- getElmJsonCli
-  let elmJsonProcess = (proc elmJsonCli ["install", "--yes", toString package.fullName]) {cwd = Just $ testDirectory <> "/" <> toString package.fullName}
+  env <- ask
+  let elmJsonProcess = (proc elmJsonCli ["install", "--yes", toString package.fullName]) {cwd = Just $ env.workingDirectory <> "/" <> testDirectory <> "/" <> toString package.fullName}
   (code, _stdout', stderr') <- liftIO $ readCreateProcessWithExitCode elmJsonProcess ""
   case code of
     ExitSuccess -> pass
