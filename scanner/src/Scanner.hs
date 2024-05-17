@@ -34,9 +34,9 @@ run = do
   ElmJsonCli.checkElmJsonCliAvailable
   putStrLn "Downloading the list of Elm packages..."
   packages <- ElmPackageApi.getPackageList >>= traverse ElmPackage.fromElmPackageSummary
-  -- packages <- pure hardcodedPackages
+  -- packages <- pure hardcodedPackages -- Note: for local quick testing
   putStrLn "Download complete."
-  ElmCli.initTesting -- TODO: disable on local re-runs
+  ElmCli.initTesting -- Note: disable on local re-runs TODO: add a flag, use optparse-applicative
   let groupSize :: Int
       groupSize = 20
 
