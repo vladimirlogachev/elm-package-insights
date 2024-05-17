@@ -1,10 +1,11 @@
-name:                scanner
-version:             0.1.0.0
-github:              "githubuser/scanner"
-license:             BSD-3-Clause
-author:              "Author name here"
-maintainer:          "example@example.com"
-copyright:           "2024 Author name here"
+name: scanner
+version: 0.1.0.0
+github: "vladimirlogachev/elm-package-insights"
+description: See README at <https://github.com/vladimirlogachev/elm-package-insights#readme>
+license: MIT
+author: Vladimir Logachev <vladimir@logachev.dev>
+maintainer: Vladimir Logachev <vladimir@logachev.dev>
+copyright: "2024  Vladimir Logachev"
 
 # Complete list: https://ghc.gitlab.haskell.org/ghc/doc/users_guide/exts/control.html
 language: GHC2021
@@ -72,31 +73,45 @@ ghc-options:
   - -Wno-missing-import-lists
 
 dependencies:
-- base >= 4.7 && < 5
-- relude # an alternative to Prelude
-
+  - base >= 4.7 && < 5
+  - aeson # for JSON
+  - async # for running requests concurrently
+  - elm-syntax # for elm codegen
+  - fmt # for composing strings
+  - generics-sop # for elm codegen
+  - haskell-to-elm # for elm codegen
+  - http-conduit # http client
+  - http-types # for low-level networking stuff
+  - mtl # for monad transformers in general
+  - process # for elm codegen and running external commands
+  - relude # an alternative to Prelude
+  - retry # for retrying idempotent HTTP requests
+  - text # for efficient strings
+  - time # for UTCTime
+  - directory # for elm codegen and cleaning elm cache
+  - pretty-simple # for pretty-printing any Show instances
 
 library:
   source-dirs: src
 
 executables:
   scanner-exe:
-    main:                Main.hs
-    source-dirs:         app
+    main: Main.hs
+    source-dirs: app
     ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
     dependencies:
-    - scanner
+      - scanner
 
 tests:
   scanner-test:
-    main:                Spec.hs
-    source-dirs:         test
+    main: Spec.hs
+    source-dirs: test
     ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
     dependencies:
-    - scanner
+      - scanner
