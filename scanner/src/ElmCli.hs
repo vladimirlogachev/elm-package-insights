@@ -1,4 +1,4 @@
-module ElmCli (checkElmCliAvailable, initProject, initTesting, compileProject) where
+module ElmCli (checkElmCliAvailable, initProject, initTesting, compileProject, FailedCompilation (..)) where
 
 import Common.Effect
 import Common.Env (AppEnv (..))
@@ -91,16 +91,12 @@ compileProject package = do
   case code of
     ExitSuccess -> pure Nothing
     _ -> do
-      let r = Aeson.decodeStrict' @AsCorruptPackageData (fromString stdErrJson)
-      case r of
-        Just (AsCorruptPackageData problemPackage) ->
-          pure
-            $ Just
-            $ FailedCompilation
-              { package = package,
-                reason = CorruptPackageData problemPackage
-              }
-        Nothing -> pure $ Just $ FailedCompilation {package = package, reason = OtherReason stdErrJson}
+      case Aeson.decodeStrict' @AsCorruptPackageData (fromString stdErrJson) of
+        Just (AsCorruptPackageData problemPackage) -> pure $ Just $ FailedCompilation {package = package, reason = CorruptPackageData problemPackage}
+        Nothing -> do
+          case Aeson.decodeStrict' @AsProblemDownloadingPackage (fromString stdErrJson) of
+            Just AsProblemDownloadingPackage -> pure $ Just $ FailedCompilation {package = package, reason = ProblemDownloadingPackage}
+            Nothing -> pure $ Just $ FailedCompilation {package = package, reason = OtherReason stdErrJson}
 
 data FailedCompilation = FailedCompilation
   { package :: ElmPackage,
@@ -111,6 +107,7 @@ data FailedCompilation = FailedCompilation
 
 data FailureReason
   = CorruptPackageData ElmPackage
+  | ProblemDownloadingPackage
   | OtherReason String
   deriving stock (Eq, Show, Generic)
   deriving anyclass (Aeson.ToJSON)
@@ -131,8 +128,7 @@ data FailureReason
 --     "\n\nBut it looks like the hash of the archive has changed since publication:\n\n  Expected: 70c67866fed499bec685f43f23fea279556757f2\n    Actual: 86534146f5a550bb8e87b87a7484ea5732090bb5\n\nThis usually means that the package author moved the version tag, so report it\nto them and see if that is the issue. Folks on Elm slack can probably help as\nwell."
 --   ]
 -- }
-newtype AsCorruptPackageData = AsCorruptPackageData {problemPackage :: ElmPackage}
-  deriving stock (Eq, Show, Generic)
+newtype AsCorruptPackageData = AsCorruptPackageData ElmPackage
 
 instance Aeson.FromJSON AsCorruptPackageData where
   parseJSON = Aeson.withObject "AsCorruptPackageData" $ \o -> do
@@ -190,3 +186,14 @@ parseProblematicPackageName s =
 --     ".\n\nPlease ask for help on the community forums if you try those paths and are still\nhaving problems!"
 --   ]
 -- }
+
+-- Example 3:
+-- "contents": "{\"type\":\"error\",\"path\":null,\"title\":\"PROBLEM DOWNLOADING PACKAGE\",\"message\":[\"I was trying to download the source code for Skinney/elm-warrior 4.0.5, so I\\ntried to fetch:\\n\\n    \",{\"bold\":false,\"underline\":false,\"color\":\"yellow\",\"string\":\"https://github.com/Skinney/elm-warrior/zipball/4.0.5/\"},\"\\n\\nBut it came back as \",{\"bold\":false,\"underline\":false,\"color\":\"RED\",\"string\":\"404\"},\" Not Found\\n\\nThis may mean some online endpoint changed in an unexpected way, so if does not\\nseem like something on your side is causing this (e.g. firewall) please report\\nthis to https://github.com/elm/compiler/issues with your operating system, Elm\\nversion, the command you ran, the terminal output, and any additional\\ninformation that can help others reproduce the error!\"]}",
+data AsProblemDownloadingPackage = AsProblemDownloadingPackage
+
+instance Aeson.FromJSON AsProblemDownloadingPackage where
+  parseJSON = Aeson.withObject "AsProblemDownloadingPackage" $ \o -> do
+    type' <- o .: "type"
+    title <- o .: "title"
+    guard (type' == Aeson.String "error" && title == Aeson.String "PROBLEM DOWNLOADING PACKAGE")
+    pure AsProblemDownloadingPackage

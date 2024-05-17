@@ -67,6 +67,7 @@ library
     , process
     , relude
     , retry
+    , split
     , text
     , time
   default-language: GHC2021
@@ -106,6 +107,7 @@ executable scanner-exe
     , relude
     , retry
     , scanner
+    , split
     , text
     , time
   default-language: GHC2021
@@ -146,6 +148,7 @@ test-suite scanner-test
     , relude
     , retry
     , scanner
+    , split
     , text
     , time
   default-language: GHC2021

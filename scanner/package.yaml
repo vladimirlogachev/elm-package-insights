@@ -76,6 +76,7 @@ dependencies:
   - base >= 4.7 && < 5
   - aeson # for JSON
   - async # for running requests concurrently
+  - directory # for elm codegen and cleaning elm cache
   - elm-syntax # for elm codegen
   - fmt # for composing strings
   - generics-sop # for elm codegen
@@ -83,13 +84,13 @@ dependencies:
   - http-conduit # http client
   - http-types # for low-level networking stuff
   - mtl # for monad transformers in general
+  - pretty-simple # for pretty-printing any Show instances
   - process # for elm codegen and running external commands
   - relude # an alternative to Prelude
   - retry # for retrying idempotent HTTP requests
+  - split # for splitting lists
   - text # for efficient strings
   - time # for UTCTime
-  - directory # for elm codegen and cleaning elm cache
-  - pretty-simple # for pretty-printing any Show instances
 
 library:
   source-dirs: src
