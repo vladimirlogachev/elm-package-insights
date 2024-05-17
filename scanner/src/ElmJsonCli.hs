@@ -24,12 +24,12 @@ checkElmJsonCliAvailable = void getElmJsonCli
 testDirectory :: FilePath
 testDirectory = ".package-test"
 
-installPackage :: ElmPackage -> AppM ()
+installPackage :: ElmPackage -> AppM (Either Text ())
 installPackage package = do
   elmJsonCli <- getElmJsonCli
   env <- ask
   let elmJsonProcess = (proc elmJsonCli ["install", "--yes", toString package.fullName]) {cwd = Just $ env.workingDirectory <> "/" <> testDirectory <> "/" <> toString package.fullName}
   (code, _stdout', stderr') <- liftIO $ readCreateProcessWithExitCode elmJsonProcess ""
   case code of
-    ExitSuccess -> pass
-    _ -> throwError $ "Failed to run `elm-json install " <> package.fullName <> "`" <> fromString stderr'
+    ExitSuccess -> pure (Right ())
+    _ -> pure $ Left $ fromString stderr'

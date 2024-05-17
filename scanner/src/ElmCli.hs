@@ -1,4 +1,4 @@
-module ElmCli (checkElmCliAvailable, initProject, initTesting, compileProject, FailedCompilation (..)) where
+module ElmCli (checkElmCliAvailable, initProject, initTesting, compileProject, FailedCompilation (..), FailureReason (..)) where
 
 import Common.Effect
 import Common.Env (AppEnv (..))
@@ -96,7 +96,7 @@ compileProject package = do
         Nothing -> do
           case Aeson.decodeStrict' @AsProblemDownloadingPackage (fromString stdErrJson) of
             Just AsProblemDownloadingPackage -> pure $ Just $ FailedCompilation {package = package, reason = ProblemDownloadingPackage}
-            Nothing -> pure $ Just $ FailedCompilation {package = package, reason = OtherReason stdErrJson}
+            Nothing -> pure $ Just $ FailedCompilation {package = package, reason = OtherReason $ fromString stdErrJson}
 
 data FailedCompilation = FailedCompilation
   { package :: ElmPackage,
@@ -108,7 +108,8 @@ data FailedCompilation = FailedCompilation
 data FailureReason
   = CorruptPackageData ElmPackage
   | ProblemDownloadingPackage
-  | OtherReason String
+  | InstallationFailed Text
+  | OtherReason Text
   deriving stock (Eq, Show, Generic)
   deriving anyclass (Aeson.ToJSON)
 
