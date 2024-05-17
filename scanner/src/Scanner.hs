@@ -36,8 +36,7 @@ run = do
   packages <- ElmPackageApi.getPackageList >>= traverse ElmPackage.fromElmPackageSummary
   -- packages <- pure hardcodedPackages
   putStrLn "Download complete."
-  -- ElmCli.initTesting
-
+  ElmCli.initTesting -- TODO: disable on local re-runs
   let groupSize :: Int
       groupSize = 20
 

@@ -61,7 +61,7 @@ stubElmMainFile =
 initTesting :: AppM ()
 initTesting = do
   env <- ask
-  -- cleanElmCache -- TODO: enable when running locally after some time (consider adding a flag to enable it)
+  cleanElmCache
   FileSystem.recursivelyDeleteDirectory $ env.workingDirectory <> "/" <> testDirectory
   fromIO $ createDirectoryIfMissing True $ env.workingDirectory <> "/" <> testDirectory
   fromIO $ createDirectoryIfMissing True $ env.workingDirectory <> "/" <> stubProjectDirectory
