@@ -1,0 +1,2078 @@
+[
+  {
+    "package": {
+      "author": "Janiczek",
+      "fullName": "Janiczek/elm-url-codec",
+      "repo": "elm-url-codec",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": "\n-- ERROR -----------------------------------------------------------------------\n\nI ran into something that bypassed the normal error reporting process! I\nextracted whatever information I could from the internal error:\n\n>   /Users/theman/side/elm-package-insights/scanner/.package-test/Janiczek/elm-url-codec/elm-stuff/0.19.1/d.dat: withBinaryFile: resource busy (file is locked)\n\nThese errors are usually pretty confusing, so start by asking around on one of\nforums listed at https://elm-lang.org/community to see if anyone can get you\nunstuck quickly.\n\n-- REQUEST ---------------------------------------------------------------------\n\nIf you are feeling up to it, please try to get your code down to the smallest\nversion that still triggers this message. Ideally in a single Main.elm and\nelm.json file.\n\nFrom there open a NEW issue at https://github.com/elm/compiler/issues with your\nreduced example pasted in directly. (Not a link to a repo or gist!) Do not worry\nabout if someone else saw something similar. More examples is better!\n\nThis kind of error is usually tied up in larger architectural choices that are\nhard to change, so even when we have a couple good examples, it can take some\ntime to resolve in a solid way.elm: /Users/theman/side/elm-package-insights/scanner/.package-test/Janiczek/elm-url-codec/elm-stuff/0.19.1/d.dat: withBinaryFile: resource busy (file is locked)\n",
+      "tag": "OtherReason"
+    }
+  },
+  {
+    "package": {
+      "author": "terezka",
+      "fullName": "terezka/charts",
+      "repo": "charts",
+      "version": "20.0.1"
+    },
+    "reason": {
+      "contents": {
+        "author": "ryannhg",
+        "fullName": "ryannhg/date-format",
+        "repo": "date-format",
+        "version": "2.3.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "terezka",
+      "fullName": "terezka/elm-charts-alpha",
+      "repo": "elm-charts-alpha",
+      "version": "2.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "ryannhg",
+        "fullName": "ryannhg/date-format",
+        "repo": "date-format",
+        "version": "2.3.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "Skinney",
+      "fullName": "Skinney/elm-deque",
+      "repo": "elm-deque",
+      "version": "1.2.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "Skinney",
+      "fullName": "Skinney/elm-phone-numbers",
+      "repo": "elm-phone-numbers",
+      "version": "2.0.29"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "Skinney",
+      "fullName": "Skinney/elm-warrior",
+      "repo": "elm-warrior",
+      "version": "4.0.5"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "Skinney",
+      "fullName": "Skinney/keyboard-events",
+      "repo": "keyboard-events",
+      "version": "2.0.1"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "Skinney",
+      "fullName": "Skinney/murmur3",
+      "repo": "murmur3",
+      "version": "2.0.8"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "jxxcarlson",
+      "fullName": "jxxcarlson/elm-stat",
+      "repo": "elm-stat",
+      "version": "6.0.2"
+    },
+    "reason": {
+      "contents": {
+        "author": "ryannhg",
+        "fullName": "ryannhg/date-format",
+        "repo": "date-format",
+        "version": "2.3.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "jxxcarlson",
+      "fullName": "jxxcarlson/scripta-compiler",
+      "repo": "scripta-compiler",
+      "version": "4.0.1"
+    },
+    "reason": {
+      "contents": {
+        "author": "ryannhg",
+        "fullName": "ryannhg/date-format",
+        "repo": "date-format",
+        "version": "2.3.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "2426021684",
+      "fullName": "2426021684/elm-collage",
+      "repo": "elm-collage",
+      "version": "1.0.2"
+    },
+    "reason": {
+      "contents": {
+        "author": "2426021684",
+        "fullName": "2426021684/elm-collage",
+        "repo": "elm-collage",
+        "version": "1.0.2"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "2426021684",
+      "fullName": "2426021684/elm-text-width",
+      "repo": "elm-text-width",
+      "version": "1.0.1"
+    },
+    "reason": {
+      "contents": {
+        "author": "2426021684",
+        "fullName": "2426021684/elm-text-width",
+        "repo": "elm-text-width",
+        "version": "1.0.1"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "8n8",
+      "fullName": "8n8/elm-string-normalize",
+      "repo": "elm-string-normalize",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "8n8",
+        "fullName": "8n8/elm-string-normalize",
+        "repo": "elm-string-normalize",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "AuricSystemsInternational",
+      "fullName": "AuricSystemsInternational/creditcard-validator",
+      "repo": "creditcard-validator",
+      "version": "1.0.1"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "Cendrb",
+      "fullName": "Cendrb/elm-css",
+      "repo": "elm-css",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "CipherDogs",
+      "fullName": "CipherDogs/elm-bitcoin",
+      "repo": "elm-bitcoin",
+      "version": "2.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "ContaSystemer",
+      "fullName": "ContaSystemer/review-no-missing-documentation",
+      "repo": "review-no-missing-documentation",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "ContaSystemer",
+        "fullName": "ContaSystemer/review-no-missing-documentation",
+        "repo": "review-no-missing-documentation",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "ContaSystemer",
+      "fullName": "ContaSystemer/review-noregex",
+      "repo": "review-noregex",
+      "version": "1.0.1"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "FuJa0815",
+      "fullName": "FuJa0815/elm-ui",
+      "repo": "elm-ui",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "FuJa0815",
+        "fullName": "FuJa0815/elm-ui",
+        "repo": "elm-ui",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "HAN-ASD-DT",
+      "fullName": "HAN-ASD-DT/priority-queue",
+      "repo": "priority-queue",
+      "version": "2.1.1"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "HAN-ASD-DT",
+      "fullName": "HAN-ASD-DT/rsa",
+      "repo": "rsa",
+      "version": "1.1.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "IzumiSy",
+      "fullName": "IzumiSy/elm-consistent-hashing",
+      "repo": "elm-consistent-hashing",
+      "version": "4.0.1"
+    },
+    "reason": {
+      "contents": "\n-- NO VALID PACKAGE VERSION ----------------------------------------------------\n\nBecause IzumiSy/elm-consistent-hashing <1.0.0, >1.0.0 <1.0.1, >1.0.1 <2.0.0,\n>2.0.0 <2.0.1, >2.0.1 <3.0.0, >3.0.0 <3.0.1, >3.0.1 <4.0.0, >4.0.0 <4.0.1,\n>4.0.1 is unavailable and IzumiSy/elm-consistent-hashing 1.0.0 depends on\nelm/core 1.0.4 <= v < 1.0.5, elm/core at versions other than 1.0.4 <= v < 1.0.5\nis incompatible with IzumiSy/elm-consistent-hashing <1.0.1, >1.0.1 <2.0.0,\n>2.0.0 <2.0.1, >2.0.1 <3.0.0, >3.0.0 <3.0.1, >3.0.1 <4.0.0, >4.0.0 <4.0.1,\n>4.0.1.\n\nAnd because elm/core at versions other than 1.0.4 <= v < 1.0.5 is incompatible\nwith IzumiSy/elm-consistent-hashing <1.0.1, >1.0.1 <2.0.0, >2.0.0 <2.0.1, >2.0.1\n<3.0.0, >3.0.0 <3.0.1, >3.0.1 <4.0.0, >4.0.0 <4.0.1, >4.0.1 and IzumiSy/elm-\nconsistent-hashing 2.0.0 depends on elm/core 1.0.4 <= v < 1.0.5, elm/core at\nversions other than 1.0.4 <= v < 1.0.5 is incompatible with IzumiSy/elm-\nconsistent-hashing <2.0.1, >2.0.1 <3.0.0, >3.0.0 <3.0.1, >3.0.1 <4.0.0, >4.0.0\n<4.0.1, >4.0.1.\n\nAnd because elm/core at versions other than 1.0.4 <= v < 1.0.5 is incompatible\nwith IzumiSy/elm-consistent-hashing <2.0.1, >2.0.1 <3.0.0, >3.0.0 <3.0.1, >3.0.1\n<4.0.0, >4.0.0 <4.0.1, >4.0.1 and IzumiSy/elm-consistent-hashing 3.0.0 depends\non elm/core 1.0.4 <= v < 1.0.5, elm/core at versions other than 1.0.4 <= v <\n1.0.5 is incompatible with IzumiSy/elm-consistent-hashing <3.0.1, >3.0.1 <4.0.0,\n>4.0.0 <4.0.1, >4.0.1.\n\nAnd because elm/core at versions other than 1.0.4 <= v < 1.0.5 is incompatible\nwith IzumiSy/elm-consistent-hashing <3.0.1, >3.0.1 <4.0.0, >4.0.0 <4.0.1, >4.0.1\nand IzumiSy/elm-consistent-hashing 4.0.0 depends on elm/core 1.0.4 <= v < 1.0.5,\nelm/core at versions other than 1.0.4 <= v < 1.0.5 is incompatible with\nIzumiSy/elm-consistent-hashing <4.0.1, >4.0.1.\n\nAnd because elm/core at versions other than 1.0.4 <= v < 1.0.5 is incompatible\nwith IzumiSy/elm-consistent-hashing <4.0.1, >4.0.1 and this project depends on\nelm/core 1.0.5, no valid set of package versions could be found.\n\n",
+      "tag": "InstallationFailed"
+    }
+  },
+  {
+    "package": {
+      "author": "JeremyBellows",
+      "fullName": "JeremyBellows/elm-bootstrapify",
+      "repo": "elm-bootstrapify",
+      "version": "9.0.1"
+    },
+    "reason": {
+      "contents": {
+        "author": "JeremyBellows",
+        "fullName": "JeremyBellows/elm-bootstrapify",
+        "repo": "elm-bootstrapify",
+        "version": "9.0.1"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "Massolari",
+      "fullName": "Massolari/time-distance",
+      "repo": "time-distance",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "MattCheely",
+      "fullName": "MattCheely/tryframe-coordinator",
+      "repo": "tryframe-coordinator",
+      "version": "2.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "Morgan-Stanley",
+      "fullName": "Morgan-Stanley/morphir-elm",
+      "repo": "morphir-elm",
+      "version": "3.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "Morgan-Stanley",
+        "fullName": "Morgan-Stanley/morphir-elm",
+        "repo": "morphir-elm",
+        "version": "3.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "NeoVier",
+      "fullName": "NeoVier/elm-eos",
+      "repo": "elm-eos",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "NeoVier",
+        "fullName": "NeoVier/elm-eos",
+        "repo": "elm-eos",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "NeoVier",
+      "fullName": "NeoVier/elm-mask",
+      "repo": "elm-mask",
+      "version": "2.0.4"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "NeoVier",
+      "fullName": "NeoVier/elm-review-no-function-outside-of-modules",
+      "repo": "elm-review-no-function-outside-of-modules",
+      "version": "2.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "RalfNorthman",
+      "fullName": "RalfNorthman/elm-zoom-plot",
+      "repo": "elm-zoom-plot",
+      "version": "3.0.1"
+    },
+    "reason": {
+      "contents": {
+        "author": "ryannhg",
+        "fullName": "ryannhg/date-format",
+        "repo": "date-format",
+        "version": "2.3.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "STTR13",
+      "fullName": "STTR13/ziplist",
+      "repo": "ziplist",
+      "version": "1.4.2"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "abinayasudhir",
+      "fullName": "abinayasudhir/html-parser",
+      "repo": "html-parser",
+      "version": "1.0.3"
+    },
+    "reason": {
+      "contents": "{\"type\":\"error\",\"path\":null,\"title\":\"PROBLEM BUILDING DEPENDENCIES\",\"message\":[\"I ran into a compilation error when trying to build the following package:\\n\\n    \",{\"bold\":false,\"underline\":false,\"color\":\"RED\",\"string\":\"abinayasudhir/html-parser 1.0.3\"},\"\\n\\nThis probably means it has package constraints that are too wide. It may be\\npossible to tweak your elm.json to avoid the root problem as a stopgap. Head\\nover to https://elm-lang.org/community to get help figuring out how to take this\\npath!\\n\\n\",{\"bold\":false,\"underline\":true,\"color\":null,\"string\":\"Note\"},\": To help with the root problem, please report this to the package author\\nalong with the following information:\\n\\n    elm/core 1.0.5\\n    elm/html 1.0.0\\n    elm/parser 1.1.0\\n    elm/virtual-dom 1.0.3\\n    rtfeldman/elm-hex 1.0.0\\n\\nIf you want to help out even more, try building the package locally. That should\\ngive you much more specific information about why this package is failing to\\nbuild, which will in turn make it easier for the package author to fix it!\"]}",
+      "tag": "OtherReason"
+    }
+  },
+  {
+    "package": {
+      "author": "abradley2",
+      "fullName": "abradley2/form-controls",
+      "repo": "form-controls",
+      "version": "2.0.2"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "abradley2",
+      "fullName": "abradley2/form-fields",
+      "repo": "form-fields",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "adius",
+      "fullName": "adius/vectual",
+      "repo": "vectual",
+      "version": "5.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "adius",
+        "fullName": "adius/vectual",
+        "repo": "vectual",
+        "version": "5.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "afidegnum",
+      "fullName": "afidegnum/elm-tailwind",
+      "repo": "elm-tailwind",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "allo-media",
+      "fullName": "allo-media/elm-daterange-picker",
+      "repo": "elm-daterange-picker",
+      "version": "4.0.2"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "altayaydemir",
+      "fullName": "altayaydemir/style-elements",
+      "repo": "style-elements",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "altjsus",
+      "fullName": "altjsus/elm-airtable",
+      "repo": "elm-airtable",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "altjsus",
+      "fullName": "altjsus/elmtable",
+      "repo": "elmtable",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "altjsus",
+        "fullName": "altjsus/elmtable",
+        "repo": "elmtable",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "anatol-1988",
+      "fullName": "anatol-1988/measurement",
+      "repo": "measurement",
+      "version": "2.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "andreasewering",
+      "fullName": "andreasewering/elm-placeholder",
+      "repo": "elm-placeholder",
+      "version": "2.2.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "andreasewering",
+        "fullName": "andreasewering/elm-placeholder",
+        "repo": "elm-placeholder",
+        "version": "2.2.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "andreasewering",
+      "fullName": "andreasewering/elm-protoc-types",
+      "repo": "elm-protoc-types",
+      "version": "1.2.1"
+    },
+    "reason": {
+      "contents": {
+        "author": "andreasewering",
+        "fullName": "andreasewering/elm-protoc-utils",
+        "repo": "elm-protoc-utils",
+        "version": "1.1.1"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "andreasewering",
+      "fullName": "andreasewering/elm-protoc-utils",
+      "repo": "elm-protoc-utils",
+      "version": "1.1.1"
+    },
+    "reason": {
+      "contents": {
+        "author": "andreasewering",
+        "fullName": "andreasewering/elm-protoc-utils",
+        "repo": "elm-protoc-utils",
+        "version": "1.1.1"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "arowM",
+      "fullName": "arowM/html",
+      "repo": "html",
+      "version": "1.0.1"
+    },
+    "reason": {
+      "contents": "{\"type\":\"compile-errors\",\"errors\":[{\"path\":\"/Users/theman/side/elm-package-insights/scanner/.package-test/arowM/html/src/Main.elm\",\"name\":\"Main\",\"problems\":[{\"title\":\"AMBIGUOUS IMPORT\",\"region\":{\"start\":{\"line\":2,\"column\":8},\"end\":{\"line\":2,\"column\":12}},\"message\":[\"You are trying to import a `Html` module:\\n\\n2| import Html\\n          \",{\"bold\":false,\"underline\":false,\"color\":\"RED\",\"string\":\"^^^^\"},\"\\nBut multiple packages in your \\\"dependencies\\\" that expose a module that name:\\n\\n\",{\"bold\":false,\"underline\":false,\"color\":\"yellow\",\"string\":\"    elm/html\\n    arowM/html\"},\"\\n\\nThere is no way to disambiguate in cases like this right now. Of the known name\\nclashes, they are usually for packages with similar purposes, so the current\\nrecommendation is to pick just one of them.\\n\\n\",{\"bold\":false,\"underline\":true,\"color\":null,\"string\":\"Note\"},\": It seems possible to resolve this with new syntax in imports, but that is\\nmore complicated than it sounds. Right now, our module names are tied to GitHub\\nrepos, but we may want to get rid of that dependency for a variety of reasons.\\nThat would in turn have implications for our package infrastructure, hosting\\ncosts, and possibly on how package names are specified. The particular syntax\\nchosen seems like it would interact with all these factors in ways that are\\ndifficult to predict, potentially leading to harder problems later on. So more\\ndesign work and planning is needed on these topics.\"]}]}]}",
+      "tag": "OtherReason"
+    }
+  },
+  {
+    "package": {
+      "author": "arowM",
+      "fullName": "arowM/tepa",
+      "repo": "tepa",
+      "version": "6.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "arowM",
+      "fullName": "arowM/tepa-zoned-time",
+      "repo": "tepa-zoned-time",
+      "version": "1.0.1"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "arsduo",
+      "fullName": "arsduo/elm-ui-drag-drop",
+      "repo": "elm-ui-drag-drop",
+      "version": "2.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "arsduo",
+        "fullName": "arsduo/elm-ui-drag-drop",
+        "repo": "elm-ui-drag-drop",
+        "version": "2.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "bellroy",
+      "fullName": "bellroy/elm-actor-framework",
+      "repo": "elm-actor-framework",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": "{\"type\":\"error\",\"path\":null,\"title\":\"PROBLEM BUILDING DEPENDENCIES\",\"message\":[\"I ran into a compilation error when trying to build the following package:\\n\\n    \",{\"bold\":false,\"underline\":false,\"color\":\"RED\",\"string\":\"bellroy/elm-actor-framework 1.0.0\"},\"\\n\\nThis probably means it has package constraints that are too wide. It may be\\npossible to tweak your elm.json to avoid the root problem as a stopgap. Head\\nover to https://elm-lang.org/community to get help figuring out how to take this\\npath!\\n\\n\",{\"bold\":false,\"underline\":true,\"color\":null,\"string\":\"Note\"},\": To help with the root problem, please report this to the package author\\nalong with the following information:\\n\\n    elm/browser 1.0.2\\n    elm/core 1.0.5\\n    elm/html 1.0.0\\n    elm/url 1.0.0\\n\\nIf you want to help out even more, try building the package locally. That should\\ngive you much more specific information about why this package is failing to\\nbuild, which will in turn make it easier for the package author to fix it!\"]}",
+      "tag": "OtherReason"
+    }
+  },
+  {
+    "package": {
+      "author": "billstclair",
+      "fullName": "billstclair/elm-chat",
+      "repo": "elm-chat",
+      "version": "3.0.2"
+    },
+    "reason": {
+      "contents": {
+        "author": "ryannhg",
+        "fullName": "ryannhg/date-format",
+        "repo": "date-format",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "bkuhlmann",
+      "fullName": "bkuhlmann/form-validator",
+      "repo": "form-validator",
+      "version": "1.2.2"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "blissfully",
+      "fullName": "blissfully/elm-chartjs-webcomponent",
+      "repo": "elm-chartjs-webcomponent",
+      "version": "2.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "blissfully",
+        "fullName": "blissfully/elm-chartjs-webcomponent",
+        "repo": "elm-chartjs-webcomponent",
+        "version": "2.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "brainrape",
+      "fullName": "brainrape/elm-arc-diagram",
+      "repo": "elm-arc-diagram",
+      "version": "2.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "brainrape",
+      "fullName": "brainrape/elm-ganja",
+      "repo": "elm-ganja",
+      "version": "2.0.2"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "brainrape",
+      "fullName": "brainrape/elm-mathml",
+      "repo": "elm-mathml",
+      "version": "2.0.2"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "burnable-tech",
+      "fullName": "burnable-tech/elm-ethereum",
+      "repo": "elm-ethereum",
+      "version": "1.0.2"
+    },
+    "reason": {
+      "contents": {
+        "author": "burnable-tech",
+        "fullName": "burnable-tech/elm-ethereum",
+        "repo": "elm-ethereum",
+        "version": "1.0.2"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "calions-app",
+      "fullName": "calions-app/app-object",
+      "repo": "app-object",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "calions-app",
+        "fullName": "calions-app/app-object",
+        "repo": "app-object",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "calions-app",
+      "fullName": "calions-app/elm-placeholder-loading",
+      "repo": "elm-placeholder-loading",
+      "version": "1.0.2"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "calions-app",
+      "fullName": "calions-app/env",
+      "repo": "env",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "calions-app",
+        "fullName": "calions-app/env",
+        "repo": "env",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "calions-app",
+      "fullName": "calions-app/jsonapi-http",
+      "repo": "jsonapi-http",
+      "version": "1.4.2"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "calions-app",
+      "fullName": "calions-app/jsonapi-http-retry",
+      "repo": "jsonapi-http-retry",
+      "version": "2.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "calions-app",
+      "fullName": "calions-app/remote-resource",
+      "repo": "remote-resource",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "calions-app",
+        "fullName": "calions-app/remote-resource",
+        "repo": "remote-resource",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "calions-app",
+      "fullName": "calions-app/test-attribute",
+      "repo": "test-attribute",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "calions-app",
+        "fullName": "calions-app/env",
+        "repo": "env",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "canceraiddev",
+      "fullName": "canceraiddev/elm-aws-core",
+      "repo": "elm-aws-core",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": "{\"type\":\"error\",\"path\":null,\"title\":\"PROBLEM BUILDING DEPENDENCIES\",\"message\":[\"I ran into a compilation error when trying to build the following package:\\n\\n    \",{\"bold\":false,\"underline\":false,\"color\":\"RED\",\"string\":\"canceraiddev/elm-aws-core 1.0.0\"},\"\\n\\nThis probably means it has package constraints that are too wide. It may be\\npossible to tweak your elm.json to avoid the root problem as a stopgap. Head\\nover to https://elm-lang.org/community to get help figuring out how to take this\\npath!\\n\\n\",{\"bold\":false,\"underline\":true,\"color\":null,\"string\":\"Note\"},\": To help with the root problem, please report this to the package author\\nalong with the following information:\\n\\n    NoRedInk/elm-json-decode-pipeline 1.0.1\\n    elm/core 1.0.5\\n    elm/http 2.0.0\\n    elm/json 1.1.3\\n    elm/regex 1.0.0\\n    elm/time 1.0.0\\n    elm/url 1.0.0\\n    elm-community/json-extra 4.3.0\\n    ktonon/elm-crypto 1.1.2\\n    ktonon/elm-word 2.1.2\\n    miniBill/elm-codec 1.2.0\\n    rtfeldman/elm-iso8601-date-strings 1.1.4\\n    the-sett/elm-refine 1.4.0\\n\\nIf you want to help out even more, try building the package locally. That should\\ngive you much more specific information about why this package is failing to\\nbuild, which will in turn make it easier for the package author to fix it!\"]}",
+      "tag": "OtherReason"
+    }
+  },
+  {
+    "package": {
+      "author": "carpe",
+      "fullName": "carpe/elm-data",
+      "repo": "elm-data",
+      "version": "4.0.5"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "chemirea",
+      "fullName": "chemirea/bulma-classes",
+      "repo": "bulma-classes",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "chemirea",
+        "fullName": "chemirea/bulma-classes",
+        "repo": "bulma-classes",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "choonkeat",
+      "fullName": "choonkeat/create-elm-server",
+      "repo": "create-elm-server",
+      "version": "1.0.1"
+    },
+    "reason": {
+      "contents": {
+        "author": "choonkeat",
+        "fullName": "choonkeat/create-elm-server",
+        "repo": "create-elm-server",
+        "version": "1.0.1"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "choonkeat",
+      "fullName": "choonkeat/elm-aws",
+      "repo": "elm-aws",
+      "version": "9.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "ryannhg",
+        "fullName": "ryannhg/date-format",
+        "repo": "date-format",
+        "version": "2.3.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "choonkeat",
+      "fullName": "choonkeat/elm-fullstack",
+      "repo": "elm-fullstack",
+      "version": "4.0.1"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "coinop-logan",
+      "fullName": "coinop-logan/nym",
+      "repo": "nym",
+      "version": "2.2.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "coreygirard",
+      "fullName": "coreygirard/elm-nonemptylist",
+      "repo": "elm-nonemptylist",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "danhandrea",
+      "fullName": "danhandrea/elm-foo",
+      "repo": "elm-foo",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "davidcavazos",
+      "fullName": "davidcavazos/parser",
+      "repo": "parser",
+      "version": "7.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "doanythingfordethklok",
+      "fullName": "doanythingfordethklok/snackbar",
+      "repo": "snackbar",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "doanythingfordethklok",
+        "fullName": "doanythingfordethklok/snackbar",
+        "repo": "snackbar",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "ericgj",
+      "fullName": "ericgj/elm-sparklines",
+      "repo": "elm-sparklines",
+      "version": "1.0.1"
+    },
+    "reason": {
+      "contents": {
+        "author": "ryannhg",
+        "fullName": "ryannhg/date-format",
+        "repo": "date-format",
+        "version": "2.3.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "fission-suite",
+      "fullName": "fission-suite/kit",
+      "repo": "kit",
+      "version": "2.2.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "fission-suite",
+      "fullName": "fission-suite/webnative-elm",
+      "repo": "webnative-elm",
+      "version": "7.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "fustkilas",
+      "fullName": "fustkilas/elm-airtable",
+      "repo": "elm-airtable",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": "elm: /Users/theman/side/elm-package-insights/scanner/.package-test/fustkilas/elm-airtable/elm-stuff/0.19.1/d.dat: withBinaryFile: resource busy (file is locked)\n\n-- ERROR -----------------------------------------------------------------------\n\nI ran into something that bypassed the normal error reporting process! I\nextracted whatever information I could from the internal error:\n\n>   thread blocked indefinitely in an MVar operation\n\nThese errors are usually pretty confusing, so start by asking around on one of\nforums listed at https://elm-lang.org/community to see if anyone can get you\nunstuck quickly.\n\n-- REQUEST ---------------------------------------------------------------------\n\nIf you are feeling up to it, please try to get your code down to the smallest\nversion that still triggers this message. Ideally in a single Main.elm and\nelm.json file.\n\nFrom there open a NEW issue at https://github.com/elm/compiler/issues with your\nreduced example pasted in directly. (Not a link to a repo or gist!) Do not worry\nabout if someone else saw something similar. More examples is better!\n\nThis kind of error is usually tied up in larger architectural choices that are\nhard to change, so even when we have a couple good examples, it can take some\ntime to resolve in a solid way.elm: thread blocked indefinitely in an MVar operation\n",
+      "tag": "OtherReason"
+    }
+  },
+  {
+    "package": {
+      "author": "gege251",
+      "fullName": "gege251/elm-validator-pipeline",
+      "repo": "elm-validator-pipeline",
+      "version": "3.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "gege251",
+        "fullName": "gege251/elm-validator-pipeline",
+        "repo": "elm-validator-pipeline",
+        "version": "3.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "getto-systems",
+      "fullName": "getto-systems/getto-elm-command",
+      "repo": "getto-elm-command",
+      "version": "1.0.2"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "gipsy-king",
+      "fullName": "gipsy-king/radar-chart",
+      "repo": "radar-chart",
+      "version": "3.0.1"
+    },
+    "reason": {
+      "contents": {
+        "author": "gipsy-king",
+        "fullName": "gipsy-king/radar-chart",
+        "repo": "radar-chart",
+        "version": "3.0.1"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "greg-enbala",
+      "fullName": "greg-enbala/elm-form",
+      "repo": "elm-form",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "henne90gen",
+      "fullName": "henne90gen/elm-pandas-visualization",
+      "repo": "elm-pandas-visualization",
+      "version": "7.0.2"
+    },
+    "reason": {
+      "contents": {
+        "author": "ryannhg",
+        "fullName": "ryannhg/date-format",
+        "repo": "date-format",
+        "version": "2.3.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "ivadzy",
+      "fullName": "ivadzy/bbase64",
+      "repo": "bbase64",
+      "version": "1.1.1"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "jamesgary",
+      "fullName": "jamesgary/elm-config-ui",
+      "repo": "elm-config-ui",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "y0hy0h",
+        "fullName": "y0hy0h/ordered-containers",
+        "repo": "ordered-containers",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "jaredramirez",
+      "fullName": "jaredramirez/elm-s3",
+      "repo": "elm-s3",
+      "version": "1.1.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "jaredramirez",
+      "fullName": "jaredramirez/elm-select",
+      "repo": "elm-select",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": "{\"type\":\"error\",\"path\":null,\"title\":\"PROBLEM BUILDING DEPENDENCIES\",\"message\":[\"I ran into a compilation error when trying to build the following package:\\n\\n    \",{\"bold\":false,\"underline\":false,\"color\":\"RED\",\"string\":\"jaredramirez/elm-select 1.0.0\"},\"\\n\\nThis probably means it has package constraints that are too wide. It may be\\npossible to tweak your elm.json to avoid the root problem as a stopgap. Head\\nover to https://elm-lang.org/community to get help figuring out how to take this\\npath!\\n\\n\",{\"bold\":false,\"underline\":true,\"color\":null,\"string\":\"Note\"},\": To help with the root problem, please report this to the package author\\nalong with the following information:\\n\\n    dzuk-mutant/elm-html-styled-aria 1.0.2\\n    elm/browser 1.0.2\\n    elm/core 1.0.5\\n    elm/json 1.1.3\\n    elm-community/list-extra 8.7.0\\n    ken-matsui/html-styled-extra 1.0.1\\n    rtfeldman/elm-css 16.1.1\\n\\nIf you want to help out even more, try building the package locally. That should\\ngive you much more specific information about why this package is failing to\\nbuild, which will in turn make it easier for the package author to fix it!\"]}",
+      "tag": "OtherReason"
+    }
+  },
+  {
+    "package": {
+      "author": "jaredramirez",
+      "fullName": "jaredramirez/html-styled-extra",
+      "repo": "html-styled-extra",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "jasonliang512",
+      "fullName": "jasonliang512/elm-heroicons",
+      "repo": "elm-heroicons",
+      "version": "2.4.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "jesterxl",
+      "fullName": "jesterxl/elm-aws-cognito",
+      "repo": "elm-aws-cognito",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "jmg-duarte",
+      "fullName": "jmg-duarte/group-list",
+      "repo": "group-list",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": "\n-- NO VALID PACKAGE VERSION ----------------------------------------------------\n\nBecause jmg-duarte/group-list <1.0.0, >1.0.0 is unavailable and jmg-\nduarte/group-list 1.0.0 depends on Elm >=0.17.1 <=0.19.0, no valid set of\npackage versions could be found.\n\nAnd because this project depends on Elm 0.19.1, no valid set of package versions\ncould be found.\n\n",
+      "tag": "InstallationFailed"
+    }
+  },
+  {
+    "package": {
+      "author": "jwheeler-cp",
+      "fullName": "jwheeler-cp/elm-form",
+      "repo": "elm-form",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "kingwither",
+      "fullName": "kingwither/elmeither",
+      "repo": "elmeither",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "kingwither",
+        "fullName": "kingwither/elmeither",
+        "repo": "elmeither",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "kress95",
+      "fullName": "kress95/elm-html-convert",
+      "repo": "elm-html-convert",
+      "version": "1.0.2"
+    },
+    "reason": {
+      "contents": {
+        "author": "kress95",
+        "fullName": "kress95/elm-html-convert",
+        "repo": "elm-html-convert",
+        "version": "1.0.2"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "kress95",
+      "fullName": "kress95/elm-review-indirect-internal",
+      "repo": "elm-review-indirect-internal",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "kutyel",
+      "fullName": "kutyel/elm-form",
+      "repo": "elm-form",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "kutyel",
+        "fullName": "kutyel/elm-form",
+        "repo": "elm-form",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "lambda-phi",
+      "fullName": "lambda-phi/lambda",
+      "repo": "lambda",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "laniakea-landscape",
+      "fullName": "laniakea-landscape/tailwindcss-typed",
+      "repo": "tailwindcss-typed",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "laniakea-landscape",
+        "fullName": "laniakea-landscape/tailwindcss-typed",
+        "repo": "tailwindcss-typed",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "lauber00",
+      "fullName": "lauber00/elm-int64",
+      "repo": "elm-int64",
+      "version": "1.2.4"
+    },
+    "reason": {
+      "contents": {
+        "author": "lauber00",
+        "fullName": "lauber00/elm-int64",
+        "repo": "elm-int64",
+        "version": "1.2.4"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "lauber00",
+      "fullName": "lauber00/elm-protocol-buffers",
+      "repo": "elm-protocol-buffers",
+      "version": "1.1.9"
+    },
+    "reason": {
+      "contents": {
+        "author": "lauber00",
+        "fullName": "lauber00/elm-int64",
+        "repo": "elm-int64",
+        "version": "1.2.4"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "lauber00",
+      "fullName": "lauber00/line-charts",
+      "repo": "line-charts",
+      "version": "1.0.3"
+    },
+    "reason": {
+      "contents": {
+        "author": "lauber00",
+        "fullName": "lauber00/line-charts",
+        "repo": "line-charts",
+        "version": "1.0.3"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "lnkr-a",
+      "fullName": "lnkr-a/tailwindcss-typed",
+      "repo": "tailwindcss-typed",
+      "version": "2.0.1"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "lucamug",
+      "fullName": "lucamug/elm-exercises",
+      "repo": "elm-exercises",
+      "version": "2.0.6"
+    },
+    "reason": {
+      "contents": {
+        "author": "ryannhg",
+        "fullName": "ryannhg/date-format",
+        "repo": "date-format",
+        "version": "2.3.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "lxierita",
+      "fullName": "lxierita/no-typealias-constructor-call",
+      "repo": "no-typealias-constructor-call",
+      "version": "1.0.1"
+    },
+    "reason": {
+      "contents": {
+        "author": "lxierita",
+        "fullName": "lxierita/no-typealias-constructor-call",
+        "repo": "no-typealias-constructor-call",
+        "version": "1.0.1"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "m-mullins",
+      "fullName": "m-mullins/elm-console",
+      "repo": "elm-console",
+      "version": "1.0.1"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "maca",
+      "fullName": "maca/crdt-replicated-graph",
+      "repo": "crdt-replicated-graph",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "maca",
+        "fullName": "maca/crdt-replicated-graph",
+        "repo": "crdt-replicated-graph",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "malaire",
+      "fullName": "malaire/elm-safe-int",
+      "repo": "elm-safe-int",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "malaire",
+      "fullName": "malaire/elm-uint64",
+      "repo": "elm-uint64",
+      "version": "2.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "malinoff",
+      "fullName": "malinoff/elm-jwt",
+      "repo": "elm-jwt",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "mathiajusth",
+      "fullName": "mathiajusth/intl-phone-input",
+      "repo": "intl-phone-input",
+      "version": "1.0.2"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "matken11235",
+      "fullName": "matken11235/html-styled-extra",
+      "repo": "html-styled-extra",
+      "version": "1.0.2"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "mthiems",
+      "fullName": "mthiems/elm-charts",
+      "repo": "elm-charts",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "nathanjohnson320",
+      "fullName": "nathanjohnson320/elm-ui-components",
+      "repo": "elm-ui-components",
+      "version": "2.3.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "nik-garmash",
+      "fullName": "nik-garmash/elm-test",
+      "repo": "elm-test",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "nixCodeX",
+      "fullName": "nixCodeX/elm-bootstrap",
+      "repo": "elm-bootstrap",
+      "version": "3.1.1"
+    },
+    "reason": {
+      "contents": {
+        "author": "nixCodeX",
+        "fullName": "nixCodeX/elm-bootstrap",
+        "repo": "elm-bootstrap",
+        "version": "3.1.1"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "not1602",
+      "fullName": "not1602/elm-feather",
+      "repo": "elm-feather",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "opvasger",
+      "fullName": "opvasger/amr",
+      "repo": "amr",
+      "version": "3.1.1"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "opvasger",
+      "fullName": "opvasger/comparable",
+      "repo": "comparable",
+      "version": "2.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "opvasger",
+      "fullName": "opvasger/develm",
+      "repo": "develm",
+      "version": "6.0.1"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "opvasger",
+      "fullName": "opvasger/enumerable",
+      "repo": "enumerable",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "opvasger",
+      "fullName": "opvasger/loadable",
+      "repo": "loadable",
+      "version": "3.2.1"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "opvasger",
+      "fullName": "opvasger/msg-replay",
+      "repo": "msg-replay",
+      "version": "1.0.1"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "ozyinc",
+      "fullName": "ozyinc/elm-sortable-table-with-row-id",
+      "repo": "elm-sortable-table-with-row-id",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "pascallemerrer",
+      "fullName": "pascallemerrer/elm-advanced-grid",
+      "repo": "elm-advanced-grid",
+      "version": "1.0.2"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "pd-andy",
+      "fullName": "pd-andy/elm-audio-graph",
+      "repo": "elm-audio-graph",
+      "version": "1.0.1"
+    },
+    "reason": {
+      "contents": {
+        "author": "pd-andy",
+        "fullName": "pd-andy/elm-audio-graph",
+        "repo": "elm-audio-graph",
+        "version": "1.0.1"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "pd-andy",
+      "fullName": "pd-andy/elm-limiter",
+      "repo": "elm-limiter",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "pd-andy",
+        "fullName": "pd-andy/elm-limiter",
+        "repo": "elm-limiter",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "pd-andy",
+      "fullName": "pd-andy/elm-web-audio",
+      "repo": "elm-web-audio",
+      "version": "2.3.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "pd-andy",
+      "fullName": "pd-andy/tuple-extra",
+      "repo": "tuple-extra",
+      "version": "1.0.1"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "peterszerzo",
+      "fullName": "peterszerzo/elm-natural-ui",
+      "repo": "elm-natural-ui",
+      "version": "16.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "peterszerzo",
+      "fullName": "peterszerzo/line-charts",
+      "repo": "line-charts",
+      "version": "1.0.1"
+    },
+    "reason": {
+      "contents": {
+        "author": "ryannhg",
+        "fullName": "ryannhg/date-format",
+        "repo": "date-format",
+        "version": "2.3.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "philipe-roberge",
+      "fullName": "philipe-roberge/elm-grid",
+      "repo": "elm-grid",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "philipe-roberge",
+        "fullName": "philipe-roberge/elm-grid",
+        "repo": "elm-grid",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "proda-ai",
+      "fullName": "proda-ai/elm-logger",
+      "repo": "elm-logger",
+      "version": "1.0.5"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "reserve-protocol",
+      "fullName": "reserve-protocol/elm-i3166-data",
+      "repo": "elm-i3166-data",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "reserve-protocol",
+        "fullName": "reserve-protocol/elm-i3166-data",
+        "repo": "elm-i3166-data",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "ringvold",
+      "fullName": "ringvold/elm-iso8601-date-strings",
+      "repo": "elm-iso8601-date-strings",
+      "version": "1.0.2"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "riskbook",
+      "fullName": "riskbook/number-to-words",
+      "repo": "number-to-words",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "romariolopezc",
+      "fullName": "romariolopezc/elm-hmac-sha1",
+      "repo": "elm-hmac-sha1",
+      "version": "3.0.1"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "romariolopezc",
+      "fullName": "romariolopezc/elm-sentry",
+      "repo": "elm-sentry",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "romariolopezc",
+        "fullName": "romariolopezc/elm-sentry",
+        "repo": "elm-sentry",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "ryannhg",
+      "fullName": "ryannhg/date-format",
+      "repo": "date-format",
+      "version": "2.3.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "ryannhg",
+        "fullName": "ryannhg/date-format",
+        "repo": "date-format",
+        "version": "2.3.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "ryannhg",
+      "fullName": "ryannhg/elm-spa",
+      "repo": "elm-spa",
+      "version": "6.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "ryannhg",
+        "fullName": "ryannhg/elm-spa",
+        "repo": "elm-spa",
+        "version": "6.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "ryannhg",
+      "fullName": "ryannhg/graphql",
+      "repo": "graphql",
+      "version": "2.1.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "ryannhg",
+        "fullName": "ryannhg/graphql",
+        "repo": "graphql",
+        "version": "2.1.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "samueldple",
+      "fullName": "samueldple/material-color",
+      "repo": "material-color",
+      "version": "1.0.1"
+    },
+    "reason": {
+      "contents": {
+        "author": "samueldple",
+        "fullName": "samueldple/material-color",
+        "repo": "material-color",
+        "version": "1.0.1"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "special-elektronik",
+      "fullName": "special-elektronik/elm-autocomplete",
+      "repo": "elm-autocomplete",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "special-elektronik",
+        "fullName": "special-elektronik/elm-autocomplete",
+        "repo": "elm-autocomplete",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "tam-carre",
+      "fullName": "tam-carre/and-collect",
+      "repo": "and-collect",
+      "version": "1.0.2"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "terry-bit-io",
+      "fullName": "terry-bit-io/elm-paginate",
+      "repo": "elm-paginate",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "tricycle",
+      "fullName": "tricycle/elm-actor-framework",
+      "repo": "elm-actor-framework",
+      "version": "1.4.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "tricycle",
+      "fullName": "tricycle/elm-actor-framework-sandbox",
+      "repo": "elm-actor-framework-sandbox",
+      "version": "3.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "tricycle",
+      "fullName": "tricycle/elm-actor-framework-template",
+      "repo": "elm-actor-framework-template",
+      "version": "1.0.1"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "tricycle",
+      "fullName": "tricycle/elm-actor-framework-template-html",
+      "repo": "elm-actor-framework-template-html",
+      "version": "1.1.3"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "tricycle",
+      "fullName": "tricycle/elm-actor-framework-template-markdown",
+      "repo": "elm-actor-framework-template-markdown",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "tricycle",
+      "fullName": "tricycle/elm-email",
+      "repo": "elm-email",
+      "version": "1.0.4"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "tricycle",
+      "fullName": "tricycle/elm-embed-youtube",
+      "repo": "elm-embed-youtube",
+      "version": "1.1.3"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "tricycle",
+      "fullName": "tricycle/elm-eventstream",
+      "repo": "elm-eventstream",
+      "version": "1.1.1"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "tricycle",
+      "fullName": "tricycle/elm-imgix",
+      "repo": "elm-imgix",
+      "version": "1.6.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "tricycle",
+      "fullName": "tricycle/elm-infinite-gallery",
+      "repo": "elm-infinite-gallery",
+      "version": "4.1.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "tricycle",
+      "fullName": "tricycle/elm-infnite-gallery",
+      "repo": "elm-infnite-gallery",
+      "version": "2.0.1"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "tricycle",
+      "fullName": "tricycle/elm-parse-dont-validate",
+      "repo": "elm-parse-dont-validate",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "tricycle",
+        "fullName": "tricycle/elm-parse-dont-validate",
+        "repo": "elm-parse-dont-validate",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "tricycle",
+      "fullName": "tricycle/elm-storage",
+      "repo": "elm-storage",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "tricycle",
+        "fullName": "tricycle/elm-storage",
+        "repo": "elm-storage",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "tricycle",
+      "fullName": "tricycle/morty-api",
+      "repo": "morty-api",
+      "version": "4.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "tricycle",
+      "fullName": "tricycle/system-actor-model",
+      "repo": "system-actor-model",
+      "version": "9.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "tricycle",
+        "fullName": "tricycle/system-actor-model",
+        "repo": "system-actor-model",
+        "version": "9.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "truqu",
+      "fullName": "truqu/line-charts",
+      "repo": "line-charts",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "ryannhg",
+        "fullName": "ryannhg/date-format",
+        "repo": "date-format",
+        "version": "2.3.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "valentinomicko",
+      "fullName": "valentinomicko/test-forms",
+      "repo": "test-forms",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "valentinomicko",
+        "fullName": "valentinomicko/test-forms",
+        "repo": "test-forms",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "vernacular-ai",
+      "fullName": "vernacular-ai/elm-flow-chart",
+      "repo": "elm-flow-chart",
+      "version": "3.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "vernacular-ai",
+        "fullName": "vernacular-ai/elm-flow-chart",
+        "repo": "elm-flow-chart",
+        "version": "3.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "vicramgon",
+      "fullName": "vicramgon/logicus",
+      "repo": "logicus",
+      "version": "10.1.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "waratuman",
+      "fullName": "waratuman/elm-json-extra",
+      "repo": "elm-json-extra",
+      "version": "1.0.0"
+    },
+    "reason": {
+      "contents": {
+        "author": "waratuman",
+        "fullName": "waratuman/elm-json-extra",
+        "repo": "elm-json-extra",
+        "version": "1.0.0"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "wasdacraic",
+      "fullName": "wasdacraic/elm-tree-layout",
+      "repo": "elm-tree-layout",
+      "version": "1.0.1"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "xdelph",
+      "fullName": "xdelph/elm-slick-grid",
+      "repo": "elm-slick-grid",
+      "version": "1.1.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  },
+  {
+    "package": {
+      "author": "xilnocas",
+      "fullName": "xilnocas/step",
+      "repo": "step",
+      "version": "4.1.4"
+    },
+    "reason": {
+      "contents": {
+        "author": "xilnocas",
+        "fullName": "xilnocas/step",
+        "repo": "step",
+        "version": "4.1.4"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "y0hy0h",
+      "fullName": "y0hy0h/ordered-containers",
+      "repo": "ordered-containers",
+      "version": "2.0.3"
+    },
+    "reason": {
+      "contents": {
+        "author": "y0hy0h",
+        "fullName": "y0hy0h/ordered-containers",
+        "repo": "ordered-containers",
+        "version": "2.0.3"
+      },
+      "tag": "CorruptPackageData"
+    }
+  },
+  {
+    "package": {
+      "author": "yujota",
+      "fullName": "yujota/elm-makie",
+      "repo": "elm-makie",
+      "version": "1.0.0"
+    },
+    "reason": { "tag": "ProblemDownloadingPackage" }
+  }
+]
