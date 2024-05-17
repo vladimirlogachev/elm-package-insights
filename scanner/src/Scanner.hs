@@ -42,7 +42,7 @@ run = do
       groupSize = 20
 
   let checkGroup (i, g) = do
-        putTextLn $ "Pricessing items " <> show (i * groupSize) <> " to " <> show (i * groupSize + length g) <> "..."
+        putTextLn $ "Processing items " <> show (i * groupSize) <> " to " <> show (i * groupSize + length g - 1) <> "..."
         failures <- catMaybes <$> mapConcurrentlyERIO checkPackage g
         unless (null failures) $ do
           putTextLn $ "  Failures: " <> show (length failures)
