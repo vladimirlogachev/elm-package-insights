@@ -1,6 +1,6 @@
 # elm-package-insights
 
-This CLI tool scans all currently available Elm packages and checks if they can be installed and compiled.
+Detects broken Elm packages.
 
 Example output:
 
