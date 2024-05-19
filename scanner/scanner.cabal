@@ -52,14 +52,10 @@ library
     , async
     , base >=4.7 && <5
     , directory
-    , elm-syntax
     , fmt
-    , generics-sop
-    , haskell-to-elm
     , http-conduit
     , http-types
     , mtl
-    , pretty-simple
     , process
     , relude
     , retry
@@ -91,14 +87,10 @@ executable scanner-exe
     , async
     , base >=4.7 && <5
     , directory
-    , elm-syntax
     , fmt
-    , generics-sop
-    , haskell-to-elm
     , http-conduit
     , http-types
     , mtl
-    , pretty-simple
     , process
     , relude
     , retry
@@ -132,14 +124,10 @@ test-suite scanner-test
     , async
     , base >=4.7 && <5
     , directory
-    , elm-syntax
     , fmt
-    , generics-sop
-    , haskell-to-elm
     , http-conduit
     , http-types
     , mtl
-    , pretty-simple
     , process
     , relude
     , retry
