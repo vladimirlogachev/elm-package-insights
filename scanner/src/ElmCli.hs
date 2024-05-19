@@ -1,7 +1,15 @@
-module ElmCli (checkElmCliAvailable, initProject, initTesting, compileProject, FailedCompilation (..), FailureReason (..)) where
+module ElmCli
+  ( initProject,
+    resetElmPackagesCache,
+    resetDirectoriesAndCreateStubProject,
+    compileProject,
+    FailedCompilation (..),
+    FailureReason (..),
+  )
+where
 
 import Common.Effect
-import Common.Env (AppEnv (..))
+import Common.Env (AppEnv (..), createDirectoriesIfMissing)
 import Control.Monad.Except (throwError)
 import Data.Aeson ((.:))
 import Data.Aeson qualified as Aeson
@@ -9,47 +17,38 @@ import Data.Text qualified as Text
 import ElmPackage (ElmPackage (..))
 import FileSystem qualified
 import Relude
-import System.Directory (copyFile, createDirectoryIfMissing, findExecutable, getHomeDirectory)
+import System.Directory (copyFile, createDirectoryIfMissing)
 import System.Exit (ExitCode (ExitSuccess))
 import System.Process (CreateProcess (..), proc, readCreateProcessWithExitCode)
 
-elmCachePath :: AppM FilePath
-elmCachePath = do
-  homeDir <- fromIO getHomeDirectory
-  pure $ homeDir <> "/.elm/0.19.1/packages"
-
-cleanElmCache :: AppM ()
-cleanElmCache = do
-  putTextLn "Cleaning Elm package cache..."
-  elmCachePath >>= FileSystem.recursivelyDeleteDirectory
-
-getElmCli :: AppM FilePath
-getElmCli = do
-  res <- fromIO $ findExecutable "elm"
-  case res of
-    Just x -> pure x
-    Nothing -> throwError "`elm` was not found in PATH. Please install Elm and try again."
-
-checkElmCliAvailable :: AppM ()
-checkElmCliAvailable = void getElmCli
-
-{-# INLINE testDirectory #-}
-testDirectory :: FilePath
-testDirectory = ".package-test"
-
-{-# INLINE stubProjectDirectory #-}
-stubProjectDirectory :: FilePath
-stubProjectDirectory = testDirectory <> "/.stub-project"
-
--- |
--- Create a directory for testing a package
-{-# INLINE createSrcDirectoryForPackage #-}
-createSrcDirectoryForPackage :: ElmPackage -> AppM ()
-createSrcDirectoryForPackage package = do
+-- | Optional thing
+resetElmPackagesCache :: AppM ()
+resetElmPackagesCache = do
   env <- ask
-  fromIO $ createDirectoryIfMissing True (env.workingDirectory <> "/" <> testDirectory <> "/" <> toString package.fullName <> "/src")
+  putTextLn "Cleaning Elm package cache..."
+  FileSystem.recursivelyDeleteDirectory env.elmCachePath
 
-{-# INLINE stubElmMainFile #-}
+-- | Optional thing
+resetDirectoriesAndCreateStubProject :: AppM ()
+resetDirectoriesAndCreateStubProject = do
+  env <- ask
+  FileSystem.recursivelyDeleteDirectory env.testDirectory
+  FileSystem.recursivelyDeleteDirectory env.stubProjectDirectory
+  FileSystem.recursivelyDeleteDirectory env.outputsDirectory
+  fromIO $ createDirectoriesIfMissing env
+  createStubProject
+
+createStubProject :: AppM ()
+createStubProject = do
+  env <- ask
+  let elmInitProcess = (proc env.elmExecutable ["init"]) {cwd = Just env.stubProjectDirectory}
+  (code, _stdout', stderr') <- liftIO $ readCreateProcessWithExitCode elmInitProcess "y\n"
+  unless (null stderr') $ putStrLn stderr'
+  case code of
+    ExitSuccess -> pass
+    _ -> throwError "Failed to run `elm init`"
+  fromIO $ writeFileText (env.stubProjectDirectory <> "/src/Main.elm") stubElmMainFile
+
 stubElmMainFile :: Text
 stubElmMainFile =
   Text.unlines
@@ -58,35 +57,27 @@ stubElmMainFile =
       "main = Html.text \"\""
     ]
 
-initTesting :: AppM ()
-initTesting = do
-  env <- ask
-  cleanElmCache
-  FileSystem.recursivelyDeleteDirectory $ env.workingDirectory <> "/" <> testDirectory
-  fromIO $ createDirectoryIfMissing True $ env.workingDirectory <> "/" <> testDirectory
-  fromIO $ createDirectoryIfMissing True $ env.workingDirectory <> "/" <> stubProjectDirectory
-  elmCli <- getElmCli
-  let elmInitProcess = (proc elmCli ["init"]) {cwd = Just stubProjectDirectory}
-  (code, _stdout', stderr') <- liftIO $ readCreateProcessWithExitCode elmInitProcess "y\n"
-  unless (null stderr') $ putStrLn stderr'
-  case code of
-    ExitSuccess -> fromIO $ writeFileText (stubProjectDirectory <> "/src/Main.elm") stubElmMainFile
-    _ -> throwError "Failed to run `elm init`"
+packageDirectory :: FilePath -> ElmPackage -> FilePath
+packageDirectory testDirectory package = testDirectory <> "/" <> toString package.fullName
 
-{-# INLINE initProject #-}
+-- |
+-- Create a directory for testing a package
+createSrcDirectoryForPackage :: ElmPackage -> AppM ()
+createSrcDirectoryForPackage package = do
+  env <- ask
+  fromIO $ createDirectoryIfMissing True (packageDirectory env.testDirectory package <> "/src")
+
 initProject :: ElmPackage -> AppM ()
 initProject package = do
   env <- ask
   createSrcDirectoryForPackage package
-  fromIO $ copyFile (stubProjectDirectory <> "/src/Main.elm") (env.workingDirectory <> "/" <> testDirectory <> "/" <> toString package.fullName <> "/src/Main.elm")
-  fromIO $ copyFile (stubProjectDirectory <> "/elm.json") (env.workingDirectory <> "/" <> testDirectory <> "/" <> toString package.fullName <> "/elm.json")
+  fromIO $ copyFile (env.stubProjectDirectory <> "/src/Main.elm") (packageDirectory env.testDirectory package <> "/src/Main.elm")
+  fromIO $ copyFile (env.stubProjectDirectory <> "/elm.json") (packageDirectory env.testDirectory package <> "/elm.json")
 
-{-# INLINE compileProject #-}
 compileProject :: ElmPackage -> AppM (Maybe FailedCompilation)
 compileProject package = do
   env <- ask
-  elmCli <- getElmCli
-  let elmMakeProcess = (proc elmCli ["make", "--output=/dev/null", "--report=json", "src/Main.elm"]) {cwd = Just (env.workingDirectory <> "/" <> testDirectory <> "/" <> toString package.fullName)}
+  let elmMakeProcess = (proc env.elmExecutable ["make", "--output=/dev/null", "--report=json", "src/Main.elm"]) {cwd = Just (packageDirectory env.testDirectory package)}
   (code, _stdout', stdErrJson) <- fromIO $ readCreateProcessWithExitCode elmMakeProcess ""
   case code of
     ExitSuccess -> pure Nothing

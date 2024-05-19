@@ -7,18 +7,9 @@
     {
       "path": "scanner",
       "name": "scanner"
-    },
-    {
-      "path": "webapp",
-      "name": "webapp"
     }
   ],
   "settings": {
-    "[elm]": {
-      "editor.formatOnSave": true,
-      "editor.defaultFormatter": "elmTooling.elm-ls-vscode"
-    },
-    "elmLS.elmReviewDiagnostics": "warning",
     "[haskell]": {
       "editor.formatOnSave": true,
       "editor.defaultFormatter": "haskell.haskell"
@@ -57,7 +48,6 @@
     "recommendations": [
       "sclu1034.justfile",
       "haskell.haskell",
-      "elmtooling.elm-ls-vscode",
       "esbenp.prettier-vscode",
       "shd101wyy.markdown-preview-enhanced",
       "ms-azuretools.vscode-docker",

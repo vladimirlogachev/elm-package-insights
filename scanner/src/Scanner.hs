@@ -30,13 +30,12 @@ checkPackage package = do
 
 run :: AppM ()
 run = do
-  ElmCli.checkElmCliAvailable
-  ElmJsonCli.checkElmJsonCliAvailable
   putStrLn "Downloading the list of Elm packages..."
   packages <- ElmPackageApi.getPackageList >>= traverse ElmPackage.fromElmPackageSummary
-  -- packages <- pure hardcodedPackages -- Note: for local quick testing
+  -- let packages = hardcodedPackages -- Note: for local quick testing
   putStrLn "Download complete."
-  ElmCli.initTesting -- Note: disable on local re-runs TODO: add a flag, use optparse-applicative
+  ElmCli.resetElmPackagesCache -- TODO: add a flag, use optparse-applicative
+  ElmCli.resetDirectoriesAndCreateStubProject -- TODO: add a flag, use optparse-applicative
   let groupSize :: Int
       groupSize = 20
 
@@ -52,11 +51,12 @@ run = do
       & zip [0 ..]
       & traverse checkGroup
 
-  let failures = concat failures'
-  let outputFileName :: Text
-      outputFileName = ".package-test/failures.json"
+  let failures = concat failures' & sortOn (ElmPackage.fullName . ElmCli.package)
   env <- ask
-  fromIO $ Aeson.encodeFile (env.workingDirectory <> "/" <> toString outputFileName) failures
+  let detailedFileName = env.outputsDirectory <> "/failures-detailed.json"
+      simpleFileName = env.outputsDirectory <> "/failures.txt"
+  fromIO $ Aeson.encodeFile detailedFileName failures
+  fromIO $ writeFileText simpleFileName $ unlines $ map (ElmPackage.fullName . ElmCli.package) failures
   putTextLn $ "Packages: " <> show (length packages)
   putTextLn $ "Failures: " <> show (length failures)
-  putTextLn $ "See " <> outputFileName <> " for details"
+  putTextLn $ "See " <> fromString simpleFileName <> " and " <> fromString detailedFileName <> " for details"
