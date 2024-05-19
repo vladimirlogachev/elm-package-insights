@@ -1,7 +1,7 @@
 module FileSystem where
 
 import Relude
-import System.Directory (createDirectoryIfMissing, doesDirectoryExist, findExecutable, getHomeDirectory, removeDirectoryRecursive)
+import System.Directory (doesDirectoryExist, removeDirectoryRecursive)
 
 recursivelyDeleteDirectory :: (MonadIO m) => FilePath -> m ()
 recursivelyDeleteDirectory path = do

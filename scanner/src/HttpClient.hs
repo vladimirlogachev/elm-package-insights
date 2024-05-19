@@ -5,12 +5,11 @@ import Common.Env (AppEnv)
 import Common.QueryParams
 import Control.Arrow (left)
 import Control.Exception (try)
-import Control.Monad.Except (MonadError (catchError, throwError), liftEither, withExceptT)
+import Control.Monad.Except (liftEither, withExceptT)
 import Data.Aeson
-import Data.Aeson qualified as Aeson
 import Data.ByteString.Lazy qualified as LBS
 import Fmt
-import Network.HTTP.Conduit (Request (..), httpLbs, newManager, parseRequest, responseBody, tlsManagerSettings)
+import Network.HTTP.Conduit (httpLbs, newManager, parseRequest, responseBody, tlsManagerSettings)
 import Relude
 
 type HttpRequestM a = ERIO AppEnv RequestError a
@@ -26,7 +25,6 @@ getByteStringPublic path params = do
     request <- parseRequest (toString fullUrl)
     manager <- newManager tlsManagerSettings
     httpLbs request manager
-  -- TODO: add http response trace
   pure $ responseBody response
   where
     fullUrl :: Text

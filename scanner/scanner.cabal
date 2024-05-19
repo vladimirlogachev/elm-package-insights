@@ -21,18 +21,14 @@ source-repository head
 
 library
   exposed-modules:
-      Common.Duration
       Common.Effect
-      Common.ElmDeriving
       Common.Env
       Common.QueryParams
-      Common.TimeUnits
       ElmCli
       ElmJsonCli
       ElmPackage
       ElmPackageApi
       FileSystem
-      GitHubApi
       HttpClient
       Scanner
   other-modules:
