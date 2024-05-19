@@ -81,6 +81,7 @@ dependencies:
   - http-conduit # http client
   - http-types # for low-level networking stuff
   - mtl # for monad transformers in general
+  - optparse-applicative # for working with command line arguments
   # - pretty-simple # for pretty-printing any Show instances
   - process # for elm codegen and running external commands
   - relude # an alternative to Prelude

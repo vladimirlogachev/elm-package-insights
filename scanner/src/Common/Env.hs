@@ -1,4 +1,4 @@
-module Common.Env (AppEnv (..), mkAppEnv, createDirectoriesIfMissing) where
+module Common.Env (AppEnv (..), mkAppEnv) where
 
 import Relude
 import System.Directory
@@ -52,6 +52,6 @@ getElmJsonExecutable = do
 
 createDirectoriesIfMissing :: AppEnv -> IO ()
 createDirectoriesIfMissing env = do
-  createDirectoryIfMissing True (testDirectory env)
-  createDirectoryIfMissing True (stubProjectDirectory env)
-  createDirectoryIfMissing True (outputsDirectory env)
+  createDirectoryIfMissing True env.testDirectory
+  createDirectoryIfMissing True env.stubProjectDirectory
+  createDirectoryIfMissing True env.outputsDirectory

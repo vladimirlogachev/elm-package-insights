@@ -1,7 +1,8 @@
 module ElmCli
   ( initProject,
     resetElmPackagesCache,
-    resetDirectoriesAndCreateStubProject,
+    resetTestDirectories,
+    createStubProject,
     compileProject,
     FailedCompilation (..),
     FailureReason (..),
@@ -9,7 +10,7 @@ module ElmCli
 where
 
 import Common.Effect
-import Common.Env (AppEnv (..), createDirectoriesIfMissing)
+import Common.Env (AppEnv (..))
 import Control.Monad.Except (throwError)
 import Data.Aeson ((.:))
 import Data.Aeson qualified as Aeson
@@ -21,26 +22,28 @@ import System.Directory (copyFile, createDirectoryIfMissing)
 import System.Exit (ExitCode (ExitSuccess))
 import System.Process (CreateProcess (..), proc, readCreateProcessWithExitCode)
 
--- | Optional thing
+-- | Optional
 resetElmPackagesCache :: AppM ()
 resetElmPackagesCache = do
   env <- ask
   putTextLn "Cleaning Elm package cache..."
   FileSystem.recursivelyDeleteDirectory env.elmCachePath
 
--- | Optional thing
-resetDirectoriesAndCreateStubProject :: AppM ()
-resetDirectoriesAndCreateStubProject = do
+-- | Optional
+resetTestDirectories :: AppM ()
+resetTestDirectories = do
   env <- ask
   FileSystem.recursivelyDeleteDirectory env.testDirectory
-  FileSystem.recursivelyDeleteDirectory env.stubProjectDirectory
   FileSystem.recursivelyDeleteDirectory env.outputsDirectory
-  fromIO $ createDirectoriesIfMissing env
-  createStubProject
+  fromIO $ createDirectoryIfMissing True env.testDirectory
+  fromIO $ createDirectoryIfMissing True env.outputsDirectory
 
+-- | Required
 createStubProject :: AppM ()
 createStubProject = do
   env <- ask
+  FileSystem.recursivelyDeleteDirectory env.stubProjectDirectory
+  fromIO $ createDirectoryIfMissing True env.stubProjectDirectory
   let elmInitProcess = (proc env.elmExecutable ["init"]) {cwd = Just env.stubProjectDirectory}
   (code, _stdout', stderr') <- liftIO $ readCreateProcessWithExitCode elmInitProcess "y\n"
   unless (null stderr') $ putStrLn stderr'

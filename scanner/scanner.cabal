@@ -56,6 +56,7 @@ library
     , http-conduit
     , http-types
     , mtl
+    , optparse-applicative
     , process
     , relude
     , retry
@@ -91,6 +92,7 @@ executable scanner-exe
     , http-conduit
     , http-types
     , mtl
+    , optparse-applicative
     , process
     , relude
     , retry
@@ -128,6 +130,7 @@ test-suite scanner-test
     , http-conduit
     , http-types
     , mtl
+    , optparse-applicative
     , process
     , relude
     , retry
