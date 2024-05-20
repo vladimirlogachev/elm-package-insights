@@ -3,25 +3,7 @@
 # For more information, please see the documentation at:
 #   https://docs.haskellstack.org/en/stable/lock_files
 
-packages:
-- completed:
-    hackage: elm-syntax-0.3.3.0@sha256:4a03c1778c38b9c924e7e9aca07de294ec675bafa9d9184e91a574c50a3ca40c,2312
-    pantry-tree:
-      sha256: f200504f5ef03e631aba9417ae01491cfda6a35cf69da0685c815c16736c3d5d
-      size: 788
-  original:
-    hackage: elm-syntax-0.3.3.0
-- completed:
-    commit: 962a2e6c90ac5a612de96bf8dfbc2aac090dd116
-    git: https://github.com/haskell-to-elm/haskell-to-elm.git
-    name: haskell-to-elm
-    pantry-tree:
-      sha256: e8a8fe8e6d8301f544c5624195509d88c75fb7270382f97dfb5af8a0f231bb84
-      size: 853
-    version: 0.3.2.0
-  original:
-    commit: 962a2e6c90ac5a612de96bf8dfbc2aac090dd116
-    git: https://github.com/haskell-to-elm/haskell-to-elm.git
+packages: []
 snapshots:
 - completed:
     sha256: 4a0e5e187fbef423f9c60072bfb1dd56f2a01a07a2667eb1469bd79073cfceaf

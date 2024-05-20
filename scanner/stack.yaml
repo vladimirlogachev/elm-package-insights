@@ -9,7 +9,4 @@ resolver: lts-22.20
 packages:
 - .
 
-extra-deps:
-- elm-syntax-0.3.3.0
-- git: https://github.com/haskell-to-elm/haskell-to-elm.git
-  commit: 962a2e6c90ac5a612de96bf8dfbc2aac090dd116 # "Remove Travis badge"
+# extra-deps:
