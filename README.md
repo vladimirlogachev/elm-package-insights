@@ -7,8 +7,8 @@ Example output:
 ```
 Done!
 
-Total packages: 1860
-Broken packages: 169
+Total packages: 1887
+Broken packages: 165
 
 Broken package list: [workdir]/.package-test/.outputs/broken-packages.txt
 Details: [workdir]/.package-test/.outputs/broken-packages.json
