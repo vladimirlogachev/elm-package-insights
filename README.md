@@ -30,12 +30,14 @@ Checking all packages may take about 30m to complete.
 For quick local re-run:
 
 ```sh
+cd scanner
 stack run scanner-exe
 ```
 
 For longer, more comprehensive check:
 
 ```sh
+cd scanner
 stack run scanner-exe -- --reset-elm-packages-cache --reset-test-directories
 ```
 
